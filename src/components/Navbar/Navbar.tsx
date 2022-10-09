@@ -4,8 +4,7 @@ import './Navbar.scss'
 export const Navbar = () => {
     return (
         <div className='navbar__wrapper'>
-            <img src="/assets/pufi.png" alt="pufi" />
+            <img src="/assets/Pufi.png" alt="pufi" />
         </div>
     )
 }
-
