@@ -3,11 +3,11 @@
     position: relative;
 
     & .image_1{
-        background-image: url(/assets/playa_2.png);
+        background-image: url(/assets/playa_3.png);
     }
 
     & .image_2{
-        background-image: url(/assets/playa_3.png);
+        background-image: url(/assets/playa_2.png);
     }
 
     & .image_3{
@@ -81,5 +81,9 @@
         &.active{
             opacity: 1;
         }
+    }
+
+    .active {
+        opacity: 1;
     }
 }

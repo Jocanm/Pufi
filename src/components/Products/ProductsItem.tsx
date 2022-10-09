@@ -7,7 +7,7 @@ interface ProductsItemProps {
 
 export const ProductsItem = ({ item }: ProductsItemProps) => {
     return (
-        <div className='products__item'>
+        <div className='products__item' id={item.productTitle}>
             <div
                 className="products__item-image"
                 style={{ backgroundImage: `url(${item.image})` }}

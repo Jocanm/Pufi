@@ -10,16 +10,6 @@ const images = [
 ]
 
 export const InfoSection = () => {
-
-    const ref = React.useRef<HTMLInputElement>(null)
-    const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault()
-        const value = ref.current?.value
-        if(!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value || '')) {
-            return alert('Ingrese un email valido')
-        }
-    }
-
     return (
         <div className='info-section__wrapper'>
             <div className="info-section__instagram">
@@ -47,7 +37,6 @@ export const InfoSection = () => {
                         required
                         pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$'
                         title='Ingrese un email valido'
-                        ref={ref}
                     />
                     <button>
                         <i className="fa-solid fa-arrow-right"></i>

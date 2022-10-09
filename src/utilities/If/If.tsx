@@ -6,5 +6,5 @@ interface IfProps {
 }
 
 export const If = ({ children, show }: IfProps) => (
-    show ? children : null
+    show ? <>{children}</> : null
 )

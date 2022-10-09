@@ -2,16 +2,38 @@ import React from 'react'
 import './Footer.scss'
 
 export const Footer = () => {
+    const scrollToElement = (element: string) => {
+        return () => {
+            const el = document.getElementById(element)
+            el?.scrollIntoView({ behavior: 'smooth' })
+        }
+    }
     return (
         <div className='footer__wrapper'>
             <div className='footer__section'>
                 <img src="/assets/pufi_black.png" alt="pufi" />
             </div>
             <div className='footer__section'>
-                <span>PUFI RAIN</span>
-                <span>PUFI PUFF</span>
-                <span>PUFI CART</span>
-                <span>PUFI NAP</span>
+                <span
+                    style={{ cursor: "pointer" }}
+                    onClick={scrollToElement("Pufi RAIN")}>
+                    PUFI RAIN
+                </span>
+                <span
+                    style={{ cursor: "pointer" }}
+                    onClick={scrollToElement("Pufi PUFF")}>
+                    PUFI PUFF
+                </span>
+                <span
+                    style={{ cursor: "pointer" }}
+                    onClick={scrollToElement("Pufi CART")}>
+                    PUFI CART
+                </span>
+                <span
+                    style={{ cursor: "pointer" }}
+                    onClick={scrollToElement("Pufi NAP")}>
+                    PUFI NAP
+                </span>
             </div>
             <div className='footer__section'>
                 <span>CONTACTO</span>

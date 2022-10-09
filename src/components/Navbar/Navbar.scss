@@ -4,16 +4,98 @@
     padding: .5rem;
     z-index: 1;
 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
     @include md {
-        padding: 2rem;
+        padding: 2rem 1rem;
     }
 
-    @include lg{
+    @include lg {
+        padding: 3rem 2rem;
+    }
+
+    @include xl {
         padding: 3rem;
     }
 
-    & img{
+    & img {
         width: 6.25rem;
         height: 3.125rem;
+    }
+}
+
+.navbar__section {
+    display: none;
+    gap: .5rem;
+    color: #fff;
+    font-size: .8rem;
+
+    @include md {
+        display: flex;
+    }
+
+    @include lg {
+        font-size: 1rem;
+        gap: 1rem;
+    }
+
+    @include xxl {
+        font-size: 1.2rem;
+    }
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .5rem;
+        cursor: pointer;
+
+        &:not(:last-child) {
+            border-right: 1px solid #fff;
+            padding-right: .5rem;
+
+            @include lg {
+                padding-right: 1rem;
+            }
+        }
+    }
+}
+
+.navbar__authentication {
+    display: none;
+    gap: .5rem;
+    align-items: center;
+    font-size: .8rem;
+    color: #fff;
+
+    @include md {
+        display: flex;
+    }
+
+    @include lg {
+        font-size: 1rem;
+        gap: 1rem;
+    }
+
+    @include xxl {
+        font-size: 1.2rem;
+    }
+
+    &-item {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+
+        &:first-child {
+            border-right: 1px solid #fff;
+            padding-right: .5rem;
+
+            @include lg {
+                padding-right: 1rem;
+            }
+        }
     }
 }
