@@ -58,12 +58,16 @@
 
 .hero_image__slide-buttons{
     position: absolute;
-    bottom: 2rem;
+    bottom: 4rem;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     gap: 1rem;
     z-index: 10;
+
+    @include md{
+        bottom: 2rem;
+    }
 
     .hero_image__slide-button{
         width: 1rem;
