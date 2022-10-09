@@ -1,0 +1,152 @@
+.products__list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.products__item {
+    display: flex;
+    flex-direction: column;
+
+    >div {
+        height: 50vh;
+    }
+
+    .arrow {
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        clip-path: polygon(50% 22%, 0% 100%, 100% 100%);
+        transform: rotate(-90deg);
+        background-color: #fff;
+        top: 50%;
+        left: -1rem;
+    }
+
+    @include md {
+        flex-direction: row;
+
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+            .arrow{
+                transform: rotate(90deg);
+                left: auto;
+                right: -1rem;
+            }
+        }
+
+        >div {
+            height: 100vh;
+            width: 50vw;
+        }
+    }
+
+    &-image {
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+        position: relative;
+
+        @include md {
+            >img {
+                width: 50%;
+                height: 50%;
+            }
+        }
+
+        >img {
+            width: 35%;
+            height: 35%;
+            object-fit: contain;
+
+            @include md {
+                width: 40%;
+                height: 40%;
+            }
+
+            @include lg {
+                width: 50%;
+                height: 50%;
+            }
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 400;
+            text-align: center;
+
+            @include md {
+                font-size: 1.5rem;
+            }
+
+            @include lg {
+                font-size: 1.8rem;
+            }
+        }
+
+        p {
+            color: $text;
+            font-size: .8rem;
+            text-align: center;
+            padding: 0 2rem;
+
+            @include md {
+                font-size: 1rem;
+            }
+
+            @include lg {
+                font-size: 1.2rem;
+            }
+        }
+
+        .underline {
+            width: 3rem;
+            border-bottom: .0625rem solid $text_secondary;
+
+            @include md {
+                width: 4rem;
+            }
+
+            @include lg {
+                width: 5rem;
+            }
+        }
+
+        .more-info {
+            color: $text;
+            font-size: .8rem;
+            text-align: center;
+            padding: 0 2rem;
+            cursor: pointer;
+
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+
+            @include md {
+                font-size: 1rem;
+            }
+
+            @include lg {
+                font-size: 1.2rem;
+            }
+
+            span:last-child {
+                letter-spacing: .1rem;
+            }
+        }
+    }
+}

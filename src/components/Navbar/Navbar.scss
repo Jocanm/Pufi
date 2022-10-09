@@ -4,8 +4,12 @@
     padding: .5rem;
     z-index: 1;
 
+    @include md {
+        padding: 2rem;
+    }
+
     @include lg{
-        padding: 1rem;
+        padding: 3rem;
     }
 
     & img{

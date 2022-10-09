@@ -54,24 +54,6 @@
             font-size: 3.5rem;
         }
     }
-
-    .shop-button {
-        padding: .5rem 1rem;
-        color: #000;
-        border: none;
-        color: #fff;
-        border: .125rem solid #fff;
-        font-weight: 500;
-        width: 5.5rem;
-        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-
-        @include md {
-            font-size: 1rem;
-            width: 8rem;
-            padding: 1rem 1rem;
-            border-width: .25rem;
-        }
-    }
 }
 
 .hero_image__slide-buttons{

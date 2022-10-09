@@ -1,4 +1,5 @@
 import React from 'react'
+import { ShopButton } from '../ShopButton'
 import './HeroImage.scss'
 
 export const HeroImage = () => {
@@ -10,7 +11,7 @@ export const HeroImage = () => {
                     <h1>ESTAR CÓMODO,</h1>
                     <h1>NUNCA FUE TAN FÁCIL.</h1>
                 </div>
-                <button className='shop-button'>SHOP</button>
+                <ShopButton />
             </div>
             <div className="hero_image__slide-buttons">
                 <div className="hero_image__slide-button" />
