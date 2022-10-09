@@ -14,7 +14,10 @@ export const InfoSection = () => {
     const ref = React.useRef<HTMLInputElement>(null)
     const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        console.log(ref.current?.value)
+        const value = ref.current?.value
+        if(!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value || '')) {
+            return alert('Ingrese un email valido')
+        }
     }
 
     return (
@@ -34,12 +37,16 @@ export const InfoSection = () => {
                 <h5>Y entérate de todas las novedades</h5>
                 <form
                     className="email-input"
-                    onSubmit={onSubmit}
+                    method="POST"
+                    action="https://formspree.io/f/mpznlwye"
                 >
                     <input
                         type="email"
                         placeholder="Ingresa tu email"
                         name="email"
+                        required
+                        pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$'
+                        title='Ingrese un email valido'
                         ref={ref}
                     />
                     <button>
