@@ -27,7 +27,7 @@ export const data: Data[] = [
     {
         image: '/assets/products/sleeping.png',
         productImage: '/assets/products/pillow.png',
-        productTitle: 'Product Title',
+        productTitle: 'Pufi NAP',
         productDescription: 'Descripción del product. Este es un texto simulado',
     },
 ]

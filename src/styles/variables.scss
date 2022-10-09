@@ -7,6 +7,7 @@ $bp-mobile: 480px;
 $bp-tablet: 768px;
 $bp-laptop: 1024px;
 $bp-desktop: 1200px;
+$bp-large-desktop: 1440px;
 
 // Small devices
 @mixin sm {
@@ -32,6 +33,13 @@ $bp-desktop: 1200px;
 // Extra large devices
 @mixin xl {
     @media (min-width: $bp-desktop) {
+        @content;
+    }
+}
+
+// Extra extra large devices
+@mixin xxl {
+    @media (min-width: $bp-large-desktop) {
         @content;
     }
 }

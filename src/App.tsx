@@ -4,6 +4,8 @@ import './App.styles.scss'
 import { HeroImage } from './components/HeroImage'
 import { Navbar } from './components/Navbar'
 import { ProductsList } from './components/Products'
+import { InfoSection } from './components/InfoSection'
+import { Footer } from './components/Footer'
 
 const App = () => {
     return (
@@ -11,6 +13,8 @@ const App = () => {
             <Navbar />
             <HeroImage />
             <ProductsList />
+            <InfoSection />
+            <Footer />
         </div>
     )
 }
