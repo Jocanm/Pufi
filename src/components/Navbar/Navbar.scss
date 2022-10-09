@@ -1,0 +1,15 @@
+.navbar__wrapper {
+    position: absolute;
+    width: 100%;
+    padding: .5rem;
+    z-index: 1;
+
+    @include lg{
+        padding: 1rem;
+    }
+
+    & img{
+        width: 6.25rem;
+        height: 3.125rem;
+    }
+}
